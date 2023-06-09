@@ -9,10 +9,24 @@
     width: 250px;
     height: 100%;
     overflow-y: auto;
+    background: #001529;
   }
 
   &-content {
     flex: 1;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-crumb {
+    height: 56px;
+    box-shadow: 0 1px 6px #ccc;
+  }
+
+  &-main {
+    flex: 1;
+    margin: 15px;
+    overflow: auto;
   }
 }

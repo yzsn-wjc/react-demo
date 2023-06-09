@@ -1,0 +1,22 @@
+.sider-bar {
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-logo {
+    height: 56px;
+    font-size: 24px;
+    color: white;
+    line-height: 56px;
+    text-align: center;
+    -webkit-text-stroke: 1px wheat; //文字描边
+    color: transparent; //字体颜色设置为透明
+  }
+
+  &-menu {
+    flex: 1;
+    overflow: auto;
+    color: white;
+  }
+}

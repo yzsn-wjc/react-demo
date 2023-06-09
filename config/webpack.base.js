@@ -76,6 +76,8 @@ module.exports = {
     alias: {
       "@": pathResolve("src"),
       components: pathResolve("src/components"),
+      pages: pathResolve("src/pages"),
+      helpers: pathResolve("src/helpers"),
     },
   },
 

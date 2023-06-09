@@ -8,5 +8,6 @@ module.exports = merge(baseConfig, {
     hot: true,
     port: 9999,
     static: pathResolve("dist"),
+    historyApiFallback: true, // 刷新页面404问题
   },
 });
