@@ -11,6 +11,7 @@ module.exports = {
     path: pathResolve("dist"),
     filename: "js/[name].[contenthash:8].js",
     clean: true,
+    publicPath: "/",
   },
 
   module: {
@@ -77,13 +78,13 @@ module.exports = {
       "@": pathResolve("src"),
       components: pathResolve("src/components"),
       pages: pathResolve("src/pages"),
-      helpers: pathResolve("src/helpers"),
+      utils: pathResolve("src/utils"),
     },
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./public/index.html",
+      template: pathResolve("public/index.html"),
     }),
     new CopyWebpackPlugin({
       patterns: [

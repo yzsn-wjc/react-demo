@@ -18,4 +18,15 @@ export default [
       },
     ],
   },
+  {
+    key: "com-playground",
+    label: "组件示例",
+    children: [
+      {
+        key: "table",
+        label: "列表",
+        path: "/com-playground/table",
+      },
+    ],
+  },
 ];
