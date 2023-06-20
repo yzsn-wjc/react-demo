@@ -16,6 +16,11 @@ export default [
     ],
   },
   {
+    key: "micro-react",
+    path: "/app-react/*",
+    entry: "pages/micro/reactApp",
+  },
+  {
     key: "home",
     path: "/",
     entry: "pages/welcome",

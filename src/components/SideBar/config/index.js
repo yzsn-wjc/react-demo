@@ -15,6 +15,7 @@ export default [
       {
         key: "mirco-app-2",
         label: "react微应用",
+        path: "/app-react/111",
       },
     ],
   },

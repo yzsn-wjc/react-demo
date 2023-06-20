@@ -9,17 +9,14 @@ import routes from "@/routes";
 import "./index.scss";
 
 // 格式化路由，把路由打平
-const formatRoutes = (data, routesArr = [], parentItem) => {
+const formatRoutes = (data, routesArr = [], parentPath = "") => {
   if (Array.isArray(data)) {
     _.cloneDeep(data).forEach((item) => {
-      const { path: parentPath = "" } = parentItem || {};
-      const { path = "" } = item || {};
-      item.path = parentPath + path;
-
       if (item?.children?.length) {
-        parentItem = item;
-        formatRoutes(item.children, routesArr, item);
+        const newParentPath = parentPath + item.path;
+        formatRoutes(item.children, routesArr, newParentPath);
       } else {
+        item.path = parentPath + item.path;
         routesArr.push(item);
       }
     });
