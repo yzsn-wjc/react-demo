@@ -79,6 +79,7 @@ module.exports = {
       components: pathResolve("src/components"),
       pages: pathResolve("src/pages"),
       utils: pathResolve("src/utils"),
+      request: pathResolve("src/request"),
     },
   },
 
