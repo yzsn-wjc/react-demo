@@ -1,8 +1,8 @@
 import React from "react";
+import request from "request";
+import { Button } from "antd";
 
 import TableClass from "components/TableClass";
-
-import request from "request";
 
 export default class TableExample extends TableClass {
   rowKey = "_id";
@@ -50,6 +50,10 @@ export default class TableExample extends TableClass {
     } catch (error) {
       console.log(error);
     }
+  };
+
+  renderSearchHeader = () => {
+    return <Button type="primary">新建</Button>;
   };
 
   render() {

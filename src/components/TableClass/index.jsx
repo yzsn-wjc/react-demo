@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react";
 import { Table, Empty, Pagination } from "antd";
 
+import "./index.scss";
+
 const defaultState = {
   searchParams: { pageSize: 10, pageNum: 1 },
   tableData: { list: [], total: 0 },
@@ -56,30 +58,38 @@ export default class TableClass extends PureComponent {
     this.setState({ tableData: { total: data?.length, list: data } });
   };
 
+  renderSearchHeader = () => null;
+
   renderTable = () => {
     const tableProps = this.getTableProps();
     const { tableData } = this.state;
+    const searchHeader = this.renderSearchHeader();
     return (
-      <Table
-        rowKey={this.rowKey}
-        columns={this.getTabelColumns()}
-        dataSource={tableData.list}
-        locale={{
-          emptyText: (
-            <Empty
-              description="哎呀，暂无数据"
-              image={Empty.PRESENTED_IMAGE_SIMPLE}
-            />
-          ),
-        }}
-        pagination={{
-          total: tableData.total,
-          showSizeChanger: true,
-          showQuickJumper: true,
-          showTotal: (total) => `共 ${tableData.total} 条`,
-        }}
-        {...tableProps}
-      />
+      <div>
+        {searchHeader && (
+          <div className="table-search-header">{searchHeader}</div>
+        )}
+        <Table
+          rowKey={this.rowKey}
+          columns={this.getTabelColumns()}
+          dataSource={tableData.list}
+          locale={{
+            emptyText: (
+              <Empty
+                description="哎呀，暂无数据"
+                image={Empty.PRESENTED_IMAGE_SIMPLE}
+              />
+            ),
+          }}
+          pagination={{
+            total: tableData.total,
+            showSizeChanger: true,
+            showQuickJumper: true,
+            showTotal: (total) => `共 ${tableData.total} 条`,
+          }}
+          {...tableProps}
+        />
+      </div>
     );
   };
 }
