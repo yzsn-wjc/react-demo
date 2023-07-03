@@ -28,6 +28,22 @@ export default [
         label: "列表",
         path: "/com-playground/table",
       },
+      {
+        key: "flow",
+        label: "流程图",
+        path: "/com-playground/flow",
+      },
+    ],
+  },
+  {
+    key: "web-components",
+    label: "Web components",
+    children: [
+      {
+        key: "count-component",
+        label: "PopUpInfo",
+        path: "/web-components/popUpInfo",
+      },
     ],
   },
 ];
