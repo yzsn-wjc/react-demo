@@ -34,6 +34,11 @@ export default [
         path: "/popUpInfo",
         entry: "pages/webComponents/popUpInfo",
       },
+      {
+        key: "slot",
+        path: "/slot",
+        entry: "pages/webComponents/slot",
+      },
     ],
   },
   {

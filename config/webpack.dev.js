@@ -17,7 +17,7 @@ module.exports = merge(baseConfig, {
     proxy: [
       {
         context: ["/api"],
-        target: "http://localhost:5000/",
+        target: "http://localhost:1012/",
         secure: false,
         logLevel: "debug",
       },

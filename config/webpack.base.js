@@ -69,6 +69,14 @@ module.exports = {
           filename: "fonts/[name].[contenthash:8].[ext]",
         },
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+        ],
+      },
     ],
   },
 
